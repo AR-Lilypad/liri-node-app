@@ -1,6 +1,8 @@
 // add code to read and set any environment variables with the dotenv package
-const dotenv = require("dotenv").config();
-var axios = require("axios");
+require("dotenv").config();
+ console.log(process.env);
+
+ var axios = require("axios");
 var Spotify = require("'node-spotify-api'");
 var fs = require("fs");
 
@@ -38,7 +40,8 @@ switch (userSelect) {
             omdb(userSelect2);
         } else {
             omdb("Mr. Nobody");
-        break;
+        }
+            break;
     case "do-what-it-says":
         doWhatItSays();
         break;
@@ -65,34 +68,34 @@ var concertInfo = function (artist) {
 }
 
 // spotify
-function spotifyThisSong(song){
-    spotify.search({ type: 'track', query: song, limit: 1},)
-  .then(function(response) {
-    console.log(response);
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
-}
+// function spotifyThisSong(song) {
+//     spotify.search({ type: 'track', query: "Love Supreme" })
+//       .then(function (response) {
+//     console.log(response);
+// })
+//     .catch(function (err) {
+//         console.log(err);
+//     });
+// }
 
 // omdb key = 
 
-axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=" + omdbKey +"&y=&plot=short&tomatoes=true").then(
-      function(response) {
-      console.log("Title: " + response.Title);
-      console.log("Release Year: " + response.Year);
-      console.log("IMDB Rating: " + response.imdbRating);
-      console.log("Rotton Tpmatoes Rating: " + response.Ratings);
-      console.log("Made In: " + response.Country);
-      console.log("Language: " + response.Language);
-      console.log("Plot: " + response.Plot);
-      console.log("Actors include: " + response.Actors);
-    })
+// axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=" + omdbKey + "&y=&plot=short&tomatoes=true").then(
+//     function (response) {
+//         console.log("Title: " + response.Title);
+//         console.log("Release Year: " + response.Year);
+//         console.log("IMDB Rating: " + response.imdbRating);
+//         console.log("Rotton Tpmatoes Rating: " + response.Ratings);
+//         console.log("Made In: " + response.Country);
+//         console.log("Language: " + response.Language);
+//         console.log("Plot: " + response.Plot);
+//         console.log("Actors include: " + response.Actors);
+//     })
     
     
     
     
-    )
+    
 
 
 
@@ -101,23 +104,23 @@ axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=" + omdbKey +"&y=&plot=
 
 // Running the readFile module that's inside of fs.
 // Stores the read information into the variable "data"
-function doWhatItSays(){
-fs.readFile("random.txt", "utf8", function(err, data) {
-    if (err) {
-      return console.log(err);
-    }
-  
-    // Break the string down by comma separation and store the contents into the output array.
-    var output = data.split(",");
-  
-    // Loop Through the newly created output array
-    for (var i = 0; i < output.length; i++) {
-  
-      // Print each element (item) of the array/
-      console.log(output[i]);
-    }
-  });
-}
+// function doWhatItSays() {
+//     fs.readFile("random.txt", "utf8", function (err, data) {
+//         if (err) {
+//             return console.log(err);
+//         }
+
+//         // Break the string down by comma separation and store the contents into the output array.
+//         var output = data.split(",");
+
+//         // Loop Through the newly created output array
+//         for (var i = 0; i < output.length; i++) {
+
+//             // Print each element (item) of the array/
+//             console.log(output[i]);
+//         }
+//     });
+// }
 
 
 

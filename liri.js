@@ -1,17 +1,22 @@
 // add code to read and set any environment variables with the dotenv package
-require("dotenv").config();
- console.log(process.env);
+// require("dotenv").config();
 
+// the requireds
 let axios = require("axios");
-let Spotify = require("'node-spotify-api'");
-let fs = require("fs");
+// let Spotify = require("'node-spotify-api'");
+let moment = require("moment");
+// let fs = require("fs");
 
 // Add the code required to import the `keys.js` file and store it in a variable
-const keys = require("./keys.js");
+// clear
+// const keys = require("./keys.js");
 
 // access your keys 
-let spotify = new Spotify(keys.spotify);
-let omdbKey = keys.omdb.api_key;
+// let spotify = new Spotify(keys.spotify);
+// let omdbKey = keys.omdb.api_key;
+
+
+// console.log(process.env);
 
 // Make it so liri.js can take in one of the following commands:
 
@@ -21,51 +26,55 @@ let omdbKey = keys.omdb.api_key;
 // * `movie-this`
 // * `do-what-it-says`
 
-let userSelect = process.argv[2];
-let userSelect2 = process.argv[3];
+let selection = process.argv[2];
+let userInput = process.argv[3];
 
-switch (userSelect) {
+switch (selection) {
     case "concert-this":
-        concertInfo(userSelect);
+        concertThis();
         break;
     // case "spotify-this-song":
-    //     if (userSelect2) {
-    //         spotifyThisSong(userSelect2)
+    //     spotifyThisSong(value);
+    //     break;                          //     if (userSelect) {
+    //         spotifyThisSong(userSelect)
     //     } else {
     //         spotifyThisSong("A Love Supreme")
     //     }
-    //     break;
     // case "movie-this":
-    //     if (userSelect2) {
-    //         omdb(userSelect2);
-    //     } else {
-    //         omdb("Mr. Nobody");
-    //     }
-    //         break;
+    //     movieThis(value);               //     if (userSelect) {
+    //     break;                          //         omdb(userSelect);
+    //                                     //     } else {
+    //                                     //         omdb("Mr. Nobody");
+    //                                     //     }
     // case "do-what-it-says":
-    //     doWhatItSays();
+    //     doWhatItSays(value);
     //     break;
+
+
     default:
-        console.log()
+        console.log("Type a value to search such as a band, a movie, or spotify something.")
 };
 
-// concert-this ("dead can dance");
-let concertInfo = function (artist) {
-    var queryurl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id="
-    axios.get(queryurl)
+
+// concert-this 
+var concertThis = function (selection, userInput) {
+    axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp")
         .then(function (response) {
-            console.log(response.venue.name);
-            console.log(response.city);
-            console.log(response.region);
-            console.log(response.datetime);
-        },
-            function (error) {
-                if (error.response) {
-                    console.log(error.response);
-                }
+            let eventList = response.data;
+            eventList.forEach(function (response) {
+                let dateFormat = moment(response.datetime).format("MM/DD/YYYY");
+            })
+            console.log(`${response.venue.name},
+            ${response.city}, ${response.region},${response.datetime}
+=====================================================================`);
+
+            err => {
+                if (err) console.log("error.response");
             }
-        );
+        })
 }
+ 
+
 
 // spotify
 // function spotifyThisSong(song) {
@@ -79,8 +88,10 @@ let concertInfo = function (artist) {
 // }
 
 // omdb key = 
+// const BASE_URL = `https://www.omdbapi.com/?apikey=${process.env.VUE_APP_OMDB_KEY}`
+// VUE_APP_OMDB_KEY =
 
-// axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=" + omdbKey + "&y=&plot=short&tomatoes=true").then(
+// axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=${process.env.VUE_APP_OMDB_KEY}&y=&plot=short&tomatoes=true").then(
 //     function (response) {
 //         console.log("Title: " + response.Title);
 //         console.log("Release Year: " + response.Year);
@@ -91,11 +102,11 @@ let concertInfo = function (artist) {
 //         console.log("Plot: " + response.Plot);
 //         console.log("Actors include: " + response.Actors);
 //     })
-    
-    
-    
-    
-    
+
+
+
+
+
 
 
 
@@ -121,8 +132,3 @@ let concertInfo = function (artist) {
 //         }
 //     });
 // }
-
-
-
-
-// node liri.js concert-this "dead can dance"

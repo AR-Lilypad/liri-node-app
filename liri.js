@@ -2,16 +2,16 @@
 require("dotenv").config();
  console.log(process.env);
 
- var axios = require("axios");
-var Spotify = require("'node-spotify-api'");
-var fs = require("fs");
+let axios = require("axios");
+let Spotify = require("'node-spotify-api'");
+let fs = require("fs");
 
 // Add the code required to import the `keys.js` file and store it in a variable
 const keys = require("./keys.js");
 
 // access your keys 
-var spotify = new Spotify(keys.spotify);
-var omdbKey = keys.omdb.api_key;
+let spotify = new Spotify(keys.spotify);
+let omdbKey = keys.omdb.api_key;
 
 // Make it so liri.js can take in one of the following commands:
 
@@ -21,37 +21,37 @@ var omdbKey = keys.omdb.api_key;
 // * `movie-this`
 // * `do-what-it-says`
 
-const userSelect = process.argv[2];
-const userSelect2 = process.argv[3];
+let userSelect = process.argv[2];
+let userSelect2 = process.argv[3];
 
 switch (userSelect) {
     case "concert-this":
         concertInfo(userSelect);
         break;
-    case "spotify-this-song":
-        if (userSelect2) {
-            spotifyThisSong(userSelect2)
-        } else {
-            spotifyThisSong("A Love Supreme")
-        }
-        break;
-    case "movie-this":
-        if (userSelect2) {
-            omdb(userSelect2);
-        } else {
-            omdb("Mr. Nobody");
-        }
-            break;
-    case "do-what-it-says":
-        doWhatItSays();
-        break;
+    // case "spotify-this-song":
+    //     if (userSelect2) {
+    //         spotifyThisSong(userSelect2)
+    //     } else {
+    //         spotifyThisSong("A Love Supreme")
+    //     }
+    //     break;
+    // case "movie-this":
+    //     if (userSelect2) {
+    //         omdb(userSelect2);
+    //     } else {
+    //         omdb("Mr. Nobody");
+    //     }
+    //         break;
+    // case "do-what-it-says":
+    //     doWhatItSays();
+    //     break;
     default:
         console.log()
 };
 
 // concert-this ("dead can dance");
-var concertInfo = function (artist) {
-    var queryurl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+let concertInfo = function (artist) {
+    var queryurl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id="
     axios.get(queryurl)
         .then(function (response) {
             console.log(response.venue.name);

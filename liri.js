@@ -52,14 +52,15 @@ switch (selection) {
 
 
     default:
-        console.log("Type a value to search such as a band, a movie, or spotify something.")
+        console.log("Type a value to search such a band, a movie, or spotify something.")
 };
 
 
 // concert-this 
-var concertThis = function (selection, userInput) {
+function concertThis (selection, userInput) {
     axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp")
         .then(function (response) {
+            console.log(response);
             let eventList = response.data;
             eventList.forEach(function (response) {
                 let dateFormat = moment(response.datetime).format("MM/DD/YYYY");

@@ -57,24 +57,24 @@ switch (selection) {
 
 
 // concert-this 
-function concertThis (selection, userInput) {
+function concertThis(selection, userInput) {
     axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp")
         .then(function (response) {
             console.log(response);
             let eventList = response.data;
             eventList.forEach(function (response) {
                 let dateFormat = moment(response.datetime).format("MM/DD/YYYY");
-            })
-            console.log(`${response.venue.name},
-            ${response.city}, ${response.region},${response.datetime}
-=====================================================================`);
-
-            err => {
+                console.log(response.venue.name);
+                console.log(response.venue.city);
+                console.log(response.venue.region);
+                console.log(response.datetime);
+                console.log("=====================================================================");
+                
                 if (err) console.log("error.response");
-            }
-        })
-}
- 
+            })
+        });
+};
+
 
 
 // spotify

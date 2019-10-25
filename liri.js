@@ -3,16 +3,16 @@ require("dotenv").config();
 
 // the requireds
 let axios = require("axios");
-let Spotify = require("'node-spotify-api'");
+// let Spotify = require("'node-spotify-api'");
 let moment = require("moment");
 let fs = require("fs");
 
 // Add the code required to import the `keys.js` file and store it in a variable
 // clear
-const keys = require("./keys.js");
+// const keys = require("./keys.js");
 
 // access your keys 
-let spotify = new Spotify(keys.spotify);
+// let spotify = new Spotify(keys.spotify);
 // let omdbKey = keys.omdb.api_key;
 
 
@@ -74,12 +74,12 @@ var concertInfo = function (artist) {
             
             console.log("=======================================================================")
             console.log("Venue Name: " + response.data[0].venue.name + "\n");
-            console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + "\n");
+            console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + response.data[0].venue.country + "\n");
             console.log("Concert Date : " + moment(response.data[0].datetime).format("MM/DD/YY") + "\n");
 
             //array for the log.txt
             let eventList = response.data;
-            fs.appendFile("log.txt", response.data[0].venue.name + response.data[0].venue.city + response.data[0].venue.region + response.data[0].datetime + "\n", function (error) {
+            fs.appendFile("log.txt", response.data[0].venue.name + response.data[0].venue.city + response.data[0].venue.region + response.data[0].venue.country + response.data[0].datetime + "\n", function (error) {
                 if (error) {
                     return console.log(error);
                 }
@@ -94,15 +94,15 @@ var concertInfo = function (artist) {
 
 
 // spotify
-function spotifyThisSong(song) {
-    spotify.search({ type: 'track', query: "Love Supreme" })
-      .then(function (response) {
-    console.log(response);
-})
-    .catch(function (err) {
-        console.log(err);
-    });
-}
+// function spotifyThisSong(song) {
+//     spotify.search({ type: 'track', query: "Love Supreme" })
+//       .then(function (response) {
+//     console.log(response);
+// })
+//     .catch(function (err) {
+//         console.log(err);
+//     });
+// }
 
 // omdb key = 
 // const BASE_URL = `https://www.omdbapi.com/?apikey=${process.env.VUE_APP_OMDB_KEY}`

@@ -58,13 +58,6 @@ var userSelect = function (userSelection, entertainment) {
     }
 }
 
-// var concertInfo = function (artist) {
-//     var queryurl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-//     axios.get(queryurl)
-//         .then(function (response) {
-//             console.log(response.data);
-//         })
-// }
 // concert-this 
 var concertInfo = function (artist) {
     console.log(artist);
@@ -79,7 +72,7 @@ var concertInfo = function (artist) {
 
             //array for the log.txt
             let eventList = response.data;
-            fs.appendFile("log.txt", response.data[0].venue.name + response.data[0].venue.city + response.data[0].venue.region + response.data[0].venue.country + response.data[0].datetime + "\n", function (error) {
+            fs.appendFile("log.txt", "=========================================================" + "\n" + artist + "\n" + response.data[0].venue.name + "\n" + response.data[0].venue.city + "\n" + response.data[0].venue.region + "\n" + response.data[0].venue.country + "\n" + response.data[0].datetime + "\n", function (error) {
                 if (error) {
                     return console.log(error);
                 }

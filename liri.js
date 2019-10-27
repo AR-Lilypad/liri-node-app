@@ -74,7 +74,7 @@ var concertInfo = function (artist) {
             
             console.log("=======================================================================")
             console.log("Venue Name: " + response.data[0].venue.name + "\n");
-            console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + response.data[0].venue.country + "\n");
+            console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + "\n");
             console.log("Concert Date : " + moment(response.data[0].datetime).format("MM/DD/YY") + "\n");
 
             //array for the log.txt
@@ -152,4 +152,4 @@ var concertInfo = function (artist) {
 var runAll = function (userSelection, entertainment) {
     userSelect(userSelection, entertainment);
 }
-runAll(process.argv[2], process.argv.slice(3).join(" "));
+runAll(process.argv[2], process.argv.slice(3).join(""));

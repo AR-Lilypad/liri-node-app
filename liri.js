@@ -13,8 +13,6 @@ let fs = require("fs");
 
 // access your keys 
 // let spotify = new Spotify(keys.spotify);
-// let omdbKey = keys.omdb.api_key;
-
 
 // console.log(process.env);
 
@@ -42,9 +40,9 @@ var userSelect = function (userSelection, entertainment) {
         //     } else {
         //         spotifyThisSong("A Love Supreme")
         //     }
-        // case "movie-this":
-        //     movieThis(value);               //     if (userSelect) {
-        //     break;                          //         omdb(userSelect);
+        case "movie-this":
+            movieInfo(entertainment);               //     if (userSelect) {
+            break;                          //         omdb(userSelect);
         //                                     //     } else {
         //                                     //         omdb("Mr. Nobody");
         //                                     //     }
@@ -64,8 +62,8 @@ var concertInfo = function (artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
         .then(function (response) {
             // for (var i = 0; i < eventList.length; i++) {
-            
-            console.log("=======================================================================")
+
+            console.log("=======================================================================");
             console.log("Venue Name: " + response.data[0].venue.name + "\n");
             console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + "\n");
             console.log("Concert Date : " + moment(response.data[0].datetime).format("MM/DD/YY") + "\n");
@@ -80,11 +78,38 @@ var concertInfo = function (artist) {
         })
 }
 
+// =====================================================================
+
+// movie-this
+var movieInfo = function (movie) {
+    console.log(movie);
+    axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&tomatoes=true&apikey=trilogy")
+        .then(function (response) {
+            //     if (movie === undefined) {
+            //         movie = "Mr. Nobody";
+            //     }
+            //     // else {
+            //     //     omdb("Mr. Nobody");
+            //     // }
+            //     console.log(response);
+            // })
+            // .catch(function (error) {
+            //     if (error.response) {
+            console.log("=======================================================================");
+            console.log("Title: " + response.data.Title + "\n");
+            console.log("Release Year: " + response.data.Year + "\n");
+            console.log("IMDB Rating: " + response.data.imdbRating + "\n");
+            console.log("Rotton Tomatoes Rating: " + response.data.tomatoUserRating + "\n");
+            console.log("Made In: " + response.data.Country + "\n");
+            console.log("Language: " + response.data.Language + "\n");
+            console.log("Plot: " + response.data.Plot + "\n");
+            console.log("Actors include: " + response.data.Actors + "\n");
+            // }
+        });
+}
 
 
-    // =====================================================================
-
-
+//  Ratings: [ [Object], [Object], [Object] ]
 
 // spotify
 // function spotifyThisSong(song) {
@@ -96,31 +121,6 @@ var concertInfo = function (artist) {
 //         console.log(err);
 //     });
 // }
-
-// omdb key = 
-// const BASE_URL = `https://www.omdbapi.com/?apikey=${process.env.VUE_APP_OMDB_KEY}`
-// VUE_APP_OMDB_KEY =
-
-// axios.get("http://www.omdbapi.com/?t=joker&y=2019&apiKey=${process.env.VUE_APP_OMDB_KEY}&y=&plot=short&tomatoes=true").then(
-//     function (response) {
-//         console.log("Title: " + response.Title);
-//         console.log("Release Year: " + response.Year);
-//         console.log("IMDB Rating: " + response.imdbRating);
-//         console.log("Rotton Tpmatoes Rating: " + response.Ratings);
-//         console.log("Made In: " + response.Country);
-//         console.log("Language: " + response.Language);
-//         console.log("Plot: " + response.Plot);
-//         console.log("Actors include: " + response.Actors);
-//     })
-
-
-
-
-
-
-
-
-
 
 
 // Running the readFile module that's inside of fs.

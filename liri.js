@@ -82,10 +82,15 @@ var concertInfo = function (artist) {
 
 // movie-this
 var movieInfo = function (movie) {
-    console.log(movie);
+    if (!movie) {
+        movie= "Mr. Nobody";
+        console.log(movie + "\n");
+        console.log("If you haven't watched 'Mr. Nobody,' then you should: <http://www.imdb.com/title/tt0485947/>" + "\n");
+        console.log("It's on Netflix!");
+    }
     axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&tomatoes=true&apikey=trilogy")
         .then(function (response) {
-            //     if (movie === undefined) {
+            //     if (!movie) {
             //         movie = "Mr. Nobody";
             //     }
             //     // else {
@@ -99,7 +104,7 @@ var movieInfo = function (movie) {
             console.log("Title: " + response.data.Title + "\n");
             console.log("Release Year: " + response.data.Year + "\n");
             console.log("IMDB Rating: " + response.data.imdbRating + "\n");
-            console.log("Rotton Tomatoes Rating: " + response.data.tomatoUserRating + "\n");
+            console.log("Rotton Tomatoes Rating: " + response.data.tomatoUserRating + "\n");     //  Ratings: [ [Object], [Object], [Object] ]
             console.log("Made In: " + response.data.Country + "\n");
             console.log("Language: " + response.data.Language + "\n");
             console.log("Plot: " + response.data.Plot + "\n");
@@ -109,7 +114,7 @@ var movieInfo = function (movie) {
 }
 
 
-//  Ratings: [ [Object], [Object], [Object] ]
+
 
 // spotify
 // function spotifyThisSong(song) {

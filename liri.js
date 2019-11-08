@@ -20,11 +20,6 @@ let spotify = new Spotify(keys.spotify);
 // * `movie-this`
 // * `do-what-it-says`
 
-//variables for arguments that users will input on the command line selection will run the specific package
-// let selection = process.argv[2];
-// // and userInput will search for the user's query
-// let userInput = process.argv.slice(3).join(" ");
-
 var userSelect = function (userSelection, entertainment) {
     switch (userSelection) {
         case "concert-this":
@@ -33,19 +28,14 @@ var userSelect = function (userSelection, entertainment) {
 
         case "spotify-this-song":
             spotifyThisSong(entertainment);
-            break;                          //     if (userSelect) {
-        //         spotifyThisSong(userSelect)
-        //     } else {
-        //         spotifyThisSong("A Love Supreme")
-        //     }
+            break;                          
+
         case "movie-this":
-            movieInfo(entertainment);               //     if (userSelect) {
-            break;                          //         omdb(userSelect);
-        //                                     //     } else {
-        //                                     //         omdb("Mr. Nobody");
-        //                                     //     }
+            movieInfo(entertainment);            
+            break;                         
+        
         case "do-what-it-says":
-            doWhatItSays(value);
+            doWhatItSays();
             break;
 
         default:
@@ -115,7 +105,10 @@ var movieInfo = function (movie) {
 // spotify this song
 // spotify
 function spotifyThisSong(song) {
-           
+           //If user has not specified a song , default to "The Sign" imagine dragons
+	       if(song === ""){
+            song = 'With or Without You';
+     }           
         spotify.search({ type: 'track', query: song})
             .then(function (response) {
 
@@ -145,6 +138,8 @@ function doWhatItSays() {
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) {
             return console.log(err);
+        }else{
+            console.log(data.toString());
         }
     })
 }

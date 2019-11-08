@@ -3,7 +3,7 @@ require("dotenv").config();
 
 // the dependancies required
 let axios = require("axios");
-let Spotify = require("'node-spotify-api'");
+let Spotify = require("node-spotify-api");
 let moment = require("moment");
 let fs = require("fs");
 
@@ -12,8 +12,6 @@ const keys = require("./keys.js");
 
 // access your keys 
 let spotify = new Spotify(keys.spotify);
-
-console.log(process.env);
 
 // Make it so liri.js can take in one of the following commands:
 
@@ -34,7 +32,7 @@ var userSelect = function (userSelection, entertainment) {
             break;
 
         case "spotify-this-song":
-            spotifyThisSong();
+            spotifyThisSong(entertainment);
             break;                          //     if (userSelect) {
         //         spotifyThisSong(userSelect)
         //     } else {
@@ -95,7 +93,7 @@ var movieInfo = function (movie) {
             console.log("Title: " + response.data.Title + "\n");
             console.log("Release Year: " + response.data.Year + "\n");
             console.log("IMDB Rating: " + response.data.imdbRating + "\n");
-            console.log("Rotton Tomatoes Rating: " + response.data[1].tomatoesRating + "\n");     //  Ratings: [ [Object], [Object], [Object] ]
+            // console.log("Rotton Tomatoes Rating: " + response.data[1].tomatoesRating + "\n");     //  Ratings: [ [Object], [Object], [Object] ]
             console.log("Made In: " + response.data.Country + "\n");
             console.log("Language: " + response.data.Language + "\n");
             console.log("Plot: " + response.data.Plot + "\n");
@@ -103,7 +101,7 @@ var movieInfo = function (movie) {
 
             //array for the log.txt
             let movieList = response.data;
-            fs.appendFile("log.txt", "=========================================================" + "\n" + response.data.Title + "\n" + response.data.year + "\n" + response.data.imdbRating + "\n" + response.data[1].tomatoesRating + "\n" + response.data.Country + "\n" + response.data.Language + "\n" + response.data.Plot + "\n" + response.data.Actors + "\n", function (error) {
+            fs.appendFile("log.txt", "=========================================================" + "\n" + response.data.Title + "\n" + response.data.year + "\n" + response.data.imdbRating + "\n"  + response.data.Country + "\n" + response.data.Language + "\n" + response.data.Plot + "\n" + response.data.Actors + "\n", function (error) {
                 if (error) {
                     return console.log(error);
                 }
@@ -115,17 +113,14 @@ var movieInfo = function (movie) {
 //==============================================================================
 
 // spotify this song
-spotify
+// spotify
 function spotifyThisSong(song) {
-    if (!song) {
-        song = "The Sign";
-        console.log(song + songData.artists[0].name);
-
-        spotify.search({ type: 'track', query: song, limit: 3 })
+           
+        spotify.search({ type: 'track', query: song})
             .then(function (response) {
 
-                console.log(response);
-                var songData = data.tracks.items[i];
+                // console.log(response);
+                var songData = response.tracks.items[0];
                 //artist
                 console.log("Artist: " + songData.artists[0].name);
                 //song name
@@ -138,9 +133,8 @@ function spotifyThisSong(song) {
 
             })
             .catch(function (err) {
-                console.log(err);
+                console.log("error");
             });
-    }
 }
 
 //==============================================================================

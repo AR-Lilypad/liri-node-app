@@ -50,7 +50,7 @@ While in the command line type:
  
  Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
  
-![concertThis](assets/images/concertThisScreenshot.jpg)
+<img src="assets/images/concertThisScreenshot.jpg">
 
 
 

@@ -48,7 +48,40 @@ While in the command line type:
 
  `node liri.js concert-this cher` 
  
- Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+
+_________________________________________________________________________________________________________________________________
+
+### movie-this
+While in the command line type:
+
+ `node liri.js movie-this joker` 
+ 
+ Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+
+__________________________________________________________________________________________________________________________________
+
+### spotify-this-song
+While in the command line type:
+
+ `node liri.js spotify-this-song jeepster` 
+ 
+ Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+
+________________________________________________________________________________________________________________________________
+
+### do-what-it-says
+While in the command line type:
+
+ `node liri.js do-what-it-says` 
+ 
+ Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 

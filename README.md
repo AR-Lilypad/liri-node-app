@@ -85,7 +85,7 @@ While in the command line type:
  
  Here's a video of this command & its results:   https://youtu.be/dU4cJbMZGlA
  
-![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriDoWhatItSays_Moment.JPG)
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriDoWhatItSays_Moment.jpg)
 
 ______________________________________________________________________________________________________________________________
 

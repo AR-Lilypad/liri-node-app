@@ -95,3 +95,5 @@ In addition to logging the data to the terminal window, the returned data will b
 Each command will be added to a log and the user can open the file to see all of the searches that were conducted using this app.
 
 Here is a video and screen shot of the log.  https://youtu.be/dU4cJbMZGlA
+
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/logTXT_Moment.jpg)

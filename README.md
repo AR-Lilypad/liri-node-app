@@ -30,7 +30,7 @@ The technologies used in the application are:
 
   You can run this app by forking this repository and downloading it to your computer.
 
-  You will need to create yur own .env file to contain your own api credentials. For example for Spotify your .env would contain the following:
+  You will need to create your own .env file to contain your own api credentials. For example for Spotify, your .env would contain the following:
 
 
      ### Spotify API keys
@@ -39,7 +39,13 @@ The technologies used in the application are:
 
      SPOTIFY_SECRET=your-spotify-secret 
 
+When this is complete, and while in your application folder, open your command line terminal and type `npm install` to install the npm packages that are dependent.  You are now ready to run the application.
 
+ ## Running the commands:
+
+### concert-this
+While in the command line type:
+`node liri.js concert-this cher`
 
 
 

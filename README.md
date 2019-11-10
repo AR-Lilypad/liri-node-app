@@ -45,7 +45,7 @@ When this is complete, and while in your application folder, open your command l
 
 ### concert-this
 While in the command line type:
-`node liri.js concert-this cher`
+** `node liri.js concert-this cher` **
 
 
 

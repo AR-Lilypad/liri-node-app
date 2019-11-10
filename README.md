@@ -1,4 +1,4 @@
-## liri-node app
+## Liri-Node App
 **LIRI** is a ***L***anguage ***I***nterpretation and ***R***ecognition ***I***nterface. 
 As a command line interface, LIRI is a node application that will take a user's input or parameters and return data.  Through API (Application Programming Interface) liri can retrieve movie, song, concert information or follow instructions from a text file.   
 
@@ -48,12 +48,50 @@ While in the command line type:
 
  `node liri.js concert-this cher` 
  
- Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ Here's a link to a video that shows the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
  
-![concertThis]{images/concertThisScreenshot.jpg}
+  ...and here is a screenshot below.
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
+_________________________________________________________________________________________________________________________________
 
+### movie-this
+While in the command line type:
 
+ `node liri.js movie-this joker` 
+ 
+ Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
+__________________________________________________________________________________________________________________________________
 
+### spotify-this-song
+While in the command line type:
 
+ `node liri.js spotify-this-song jeepster` 
+ 
+Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+
+________________________________________________________________________________________________________________________________
+
+### do-what-it-says
+While in the command line type:
+
+ `node liri.js do-what-it-says` 
+ 
+ Here's a video of this command & its results:   https://youtu.be/N3kZ_kjIjaE
+ 
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+
+______________________________________________________________________________________________________________________________
+
+### Logging the responses
+
+In addition to logging the data to the terminal window, the returned data will be stored to a .txt file called `log.txt`.
+Each command will be added to a log and the user can open the file to see all of the searches that were conducted using this app.
+
+Here is a screen shot of the log.

@@ -107,7 +107,7 @@ var movieInfo = function (movie) {
 function spotifyThisSong(song) {
     //If user has not specified a song , default to "The Sign" imagine dragons
     if (song === "") {
-        song = 'Jeepster';
+        song = 'With or Without You';
     }
     spotify.search({ type: 'track', query: song })
         .then(function (response) {

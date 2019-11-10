@@ -48,7 +48,8 @@ While in the command line type:
 
  `node liri.js concert-this cher` 
  
- Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+ Here's a link to a video that shows the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+  ...and here is a screenshot below.
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 

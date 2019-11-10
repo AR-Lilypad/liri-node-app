@@ -70,11 +70,11 @@ ________________________________________________________________________________
 ### spotify-this-song
 While in the command line type:
 
- `node liri.js spotify-this-song jeepster` 
+ `node liri.js spotify-this-song "what's going on"` 
  
-Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+Here's a video to show the command in action and its results:   https://youtu.be/Z1UwFeJBjjw
  
-![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriMovieThis_Moment.jpg)
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriSpotifyThis_Moment.jpg)
 
 ________________________________________________________________________________________________________________________________
 

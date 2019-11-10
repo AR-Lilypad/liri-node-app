@@ -50,7 +50,7 @@ While in the command line type:
  
  Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
  
- [![Concert-This](<iframe width="560" height="315" src="https://www.youtube.com/embed/N3kZ_kjIjaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+ [![Concert-This](https://img.youtube.com/vi/N3kZ_kjIjaE.jpg)](http://www.youtube.com/watch?v=N3kZ_kjIjaE "Click to play on youtube.com")
 
 
 

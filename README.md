@@ -48,7 +48,7 @@ While in the command line type:
 
  `node liri.js concert-this cher` 
  
- Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
@@ -59,7 +59,7 @@ While in the command line type:
 
  `node liri.js movie-this joker` 
  
- Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
@@ -70,7 +70,7 @@ While in the command line type:
 
  `node liri.js spotify-this-song jeepster` 
  
- Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
@@ -81,7 +81,7 @@ While in the command line type:
 
  `node liri.js do-what-it-says` 
  
- Here's a video of this command:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video of this command & its results:   https://youtu.be/N3kZ_kjIjaE
  
 ![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
@@ -92,4 +92,4 @@ ________________________________________________________________________________
 In addition to logging the data to the terminal window, the returned data will be stored to a .txt file called `log.txt`.
 Each command will be added to a log and the user can open the file to see all of the searches that were conducted using this app.
 
-
+Here is a screen shot of the log.

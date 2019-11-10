@@ -50,8 +50,7 @@ While in the command line type:
  
  Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
  
-<img src="assets/images/concertThisScreenshot.jpg">
-
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
 
 
 

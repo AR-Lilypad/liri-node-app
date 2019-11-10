@@ -61,9 +61,9 @@ While in the command line type:
 
  `node liri.js movie-this joker` 
  
- Here's a video to show the command in action and its results:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video to show the command in action and its results:   https://youtu.be/A1qhvWYC_Uo
  
-![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriMovieThis_Moment.JPG)
 
 __________________________________________________________________________________________________________________________________
 

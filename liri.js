@@ -28,12 +28,12 @@ var userSelect = function (userSelection, entertainment) {
 
         case "spotify-this-song":
             spotifyThisSong(entertainment);
-            break;                          
+            break;
 
         case "movie-this":
-            movieInfo(entertainment);            
-            break;                         
-        
+            movieInfo(entertainment);
+            break;
+
         case "do-what-it-says":
             doWhatItSays();
             break;
@@ -91,7 +91,7 @@ var movieInfo = function (movie) {
 
             //array for the log.txt
             let movieList = response.data;
-            fs.appendFile("log.txt", "=========================================================" + "\n" + response.data.Title + "\n" + response.data.year + "\n" + response.data.imdbRating + "\n"  + response.data.Country + "\n" + response.data.Language + "\n" + response.data.Plot + "\n" + response.data.Actors + "\n", function (error) {
+            fs.appendFile("log.txt", "=========================================================" + "\n" + response.data.Title + "\n" + response.data.year + "\n" + response.data.imdbRating + "\n" + response.data.Country + "\n" + response.data.Language + "\n" + response.data.Plot + "\n" + response.data.Actors + "\n", function (error) {
                 if (error) {
                     return console.log(error);
                 }
@@ -105,29 +105,29 @@ var movieInfo = function (movie) {
 // spotify this song
 // spotify
 function spotifyThisSong(song) {
-           //If user has not specified a song , default to "The Sign" imagine dragons
-	       if(song === ""){
-            song = 'With or Without You';
-     }           
-        spotify.search({ type: 'track', query: song})
-            .then(function (response) {
+    //If user has not specified a song , default to "The Sign" imagine dragons
+    if (song === "") {
+        song = 'Jeepster';
+    }
+    spotify.search({ type: 'track', query: song })
+        .then(function (response) {
 
-                // console.log(response);
-                var songData = response.tracks.items[0];
-                //artist
-                console.log("Artist: " + songData.artists[0].name);
-                //song name
-                console.log("Song: " + songData.name);
-                //spotify preview link
-                console.log("Preview URL: " + songData.preview_url);
-                //album name
-                console.log("Album: " + songData.album.name);
-                console.log("-----------------------");
+            // console.log(response);
+            var songData = response.tracks.items[0];
+            //artist
+            console.log("Artist: " + songData.artists[0].name);
+            //song name
+            console.log("Song: " + songData.name);
+            //spotify preview link
+            console.log("Preview URL: " + songData.preview_url);
+            //album name
+            console.log("Album: " + songData.album.name);
+            console.log("-----------------------");
 
-            })
-            .catch(function (err) {
-                console.log("error");
-            });
+        })
+        .catch(function (err) {
+            console.log("error");
+        });
 }
 
 //==============================================================================
@@ -138,7 +138,7 @@ function doWhatItSays() {
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) {
             return console.log(err);
-        }else{
+        } else {
             console.log(data.toString());
         }
     })

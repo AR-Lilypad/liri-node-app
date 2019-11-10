@@ -33,12 +33,13 @@ The technologies used in the application are:
   You will need to create yur own .env file to contain your own api credentials. For example for Spotify your .env would contain the following:
 
 
-     # Spotify API keys
+     ### Spotify API keys
 
      SPOTIFY_ID=your-spotify-id
+
      SPOTIFY_SECRET=your-spotify-secret 
 
-     
+
 
 
 

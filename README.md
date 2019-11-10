@@ -50,7 +50,7 @@ While in the command line type:
  
  Here is a video of this command:   https://youtu.be/N3kZ_kjIjaE
  
- [![Concert-This] (https://img.youtube.com/vi/N3kZ_kjIjaE/0.JPG)](https://www.youtube.com/watch?v=N3kZ_kjIjaE)
+ [![Concert-This](https://img.youtube.com/vi/N3kZ_kjIjaE/0.JPG)](https://www.youtube.com/watch?v=N3kZ_kjIjaE)
 
 
 

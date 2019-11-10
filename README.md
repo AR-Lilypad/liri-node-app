@@ -83,9 +83,9 @@ While in the command line type:
 
  `node liri.js do-what-it-says` 
  
- Here's a video of this command & its results:   https://youtu.be/N3kZ_kjIjaE
+ Here's a video of this command & its results:   https://youtu.be/dU4cJbMZGlA
  
-![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/concertThisScreenshot.JPG)
+![](https://github.com/AR-Lilypad/liri-node-app/blob/master/assets/images/liriDoWhatItSays_Moment.JPG)
 
 ______________________________________________________________________________________________________________________________
 

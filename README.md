@@ -94,4 +94,4 @@ ________________________________________________________________________________
 In addition to logging the data to the terminal window, the returned data will be stored to a .txt file called `log.txt`.
 Each command will be added to a log and the user can open the file to see all of the searches that were conducted using this app.
 
-Here is a screen shot of the log.
+Here is a video and screen shot of the log.  https://youtu.be/dU4cJbMZGlA
